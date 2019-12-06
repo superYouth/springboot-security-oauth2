@@ -1,0 +1,33 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: registry-center
+#  datasource:
+#    druid:
+#      url: ${MYSQL_URL:jdbc:mysql://localhost:3306/xc_user?characterEncoding=utf-8}
+#      username: root
+#      password: mysql
+#      driverClassName: com.mysql.jdbc.Driver
+#      initialSize: 5  #初始建立连接数量
+#      minIdle: 5  #最小连接数量
+#      maxActive: 20 #最大连接数量
+#      maxWait: 10000  #获取连接最大等待时间，毫秒
+#      testOnBorrow: true #申请连接时检测连接是否有效
+#      testOnReturn: false #归还连接时检测连接是否有效
+#      timeBetweenEvictionRunsMillis: 60000 #配置间隔检测连接是否有效的时间（单位是毫秒）
+#      minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）
+eureka:
+  client:
+    service-url:
+      # eureka 服务地址，如果是集群的话；需要指定其它eureka服务器地址
+      defaultZone: http://127.0.0.1:10086/eureka
+    # 不注册自己，如果搭建集群，需置为true
+    register-with-eureka: false
+    # 不拉取服务，如果搭建集群，需置为true
+    fetch-registry: false
+  server:
+    # 服务失效剔除时间间隔，默认60秒
+    eviction-interval-timer-in-ms: 60000
+    # 关闭自我保护模式（默认是打开的）
+    enable-self-preservation: false
