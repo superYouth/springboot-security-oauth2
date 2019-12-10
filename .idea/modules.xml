@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/auth-service/auth-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/project-parent/project-parent.iml" filepath="$PROJECT_DIR$/project-parent/project-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry-center/registry-center.iml" filepath="$PROJECT_DIR$/registry-center/registry-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registry-center/registry-center.iml" filepath="$PROJECT_DIR$/registry-center/registry-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-provider1/service-provider1.iml" filepath="$PROJECT_DIR$/service-provider1/service-provider1.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-provider1/service-provider1.iml" filepath="$PROJECT_DIR$/service-provider1/service-provider1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot-security-oauth2.iml" filepath="$PROJECT_DIR$/.idea/springboot-security-oauth2.iml" />
     </modules>

@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="registry-center" />
         <module name="auth-service" />
+        <module name="registry-center" />
         <module name="service-provider1" />
       </profile>
     </annotationProcessing>

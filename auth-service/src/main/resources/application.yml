@@ -6,8 +6,6 @@ server:
 spring:
   application:
     name: auth-service
-  resources:
-    static-locations: classpath:/static/
   redis:
     host: ${REDIS_HOST:127.0.0.1}
     port: ${REDIS_PORT:6379}
@@ -31,6 +29,10 @@ spring:
       testOnReturn: false #归还连接时检测连接是否有效
       timeBetweenEvictionRunsMillis: 60000 #配置间隔检测连接是否有效的时间（单位是毫秒）
       minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）
+  mvc:
+    view:
+      prefix: /static/
+      suffix: .html
 
 auth:
   tokenValiditySeconds: 1200  #token存储到redis的过期时间
