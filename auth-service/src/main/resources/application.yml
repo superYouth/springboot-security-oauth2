@@ -1,8 +1,8 @@
 ---
 server:
   port: ${PORT:40400}
-  servlet:
-    context-path: /auth
+#  servlet:
+#    context-path: /auth
 spring:
   application:
     name: auth-service
