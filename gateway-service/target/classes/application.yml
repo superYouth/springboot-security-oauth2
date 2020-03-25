@@ -1,0 +1,49 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    preferIpAddress: true
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types:
+        - text/xml
+        - application/xml
+        - application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+  hystrix:
+    enabled: true
+logging:
+  level:
+    org:
+      springframework: info
+    root: info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,env
+server:
+  port: 9002
+spring:
+  application:
+    name: gateway-server
+  main:
+    allow-bean-definition-overriding: true
+zuul:
+  add-host-header: true
+  ignoredServices: '*'
+  retryable: true
+  routes:
+    auth-service:
+      path: /uaa/**
+      stripPrefix: false
+    service-provider1:
+      path: /user/**
+      stripPrefix: false
+  sensitiveHeaders: '*'
